@@ -12,9 +12,10 @@ def get_field_or_none(line_obj, field_name, make_int=False):
     return None
 
 wsbfile = open('wsbData.json')
-outcsv = open("processed.csv", "w")
+outcsv = open("processed_larger.csv", "w")
 csvwriter = csv.writer(outcsv)
-tickers = ["AMZN", "SPY", "TSLA", "AAPL"]
+#tickers = ["AMZN", "SPY", "TSLA", "AAPL"]
+tickers = ["TSLA", "SPY", "AAPL", "AMZN", "AMD", "NVDA", "MSFT", "GOOG", "NFLX", "SBUX", "ADBE", "ORCL", "XOM", "WMT"]
 priceprovider = PriceDataProvider(tickers)
 curr_line = 0
 while True:

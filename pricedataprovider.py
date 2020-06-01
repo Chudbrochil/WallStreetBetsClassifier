@@ -10,7 +10,7 @@ class PriceDataProvider:
     def __init__(self, ticker_list):
         self.ticker_list = ticker_list
         self.dataframes = {}
-        self.intraday = pd.read_pickle('intraday_data.pkl')
+        self.intraday = pd.read_pickle('intraday_data_larger.pkl')
         for ticker in self.ticker_list:
             self.dataframes[ticker] = pd.read_csv(ticker+".csv")
             self.dataframes[ticker].set_index('Date')
